@@ -7,12 +7,13 @@ from servers.service_server import ServiceServer
 
 class ClientServer:
     clientId = None
-    serverId = 'server1'
+    serverId = None
     authTicket = None
     grantingTicket = None
 
-    def __init__(self, clientId):
+    def __init__(self, clientId, serverId):
         self.clientId = clientId
+        self.serverId = serverId
 
     def authenticate(self):
         des = DES()

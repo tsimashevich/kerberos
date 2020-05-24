@@ -3,7 +3,8 @@ from servers.client_server import ClientServer
 
 def main():
     clientId = 'userpassword'
-    client = ClientServer(clientId)
+    serverId = 'server1'
+    client = ClientServer(clientId, serverId)
     client.authenticate()
     client.getGrantingTicket()
     client.connectToServer()
