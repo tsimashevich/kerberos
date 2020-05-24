@@ -1,0 +1,13 @@
+from servers.client_server import ClientServer
+
+
+def main():
+    clientId = 'userpassword'
+    client = ClientServer(clientId)
+    client.authenticate()
+    client.getGrantingTicket()
+    client.connectToServer()
+
+
+if __name__ == '__main__':
+    main()
